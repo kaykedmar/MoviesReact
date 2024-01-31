@@ -16,10 +16,10 @@ const Home = () => {
   // Função assíncrona para obter os filmes mais bem avaliados a partir da API
   const getTopRatedMovies = async (url) => {
     // Realiza uma requisição à API
-    const response = await fetch(url);
+    const resposta = await fetch(url);
 
     // Transforma a resposta em formato JSON
-    const data = await response.json();
+    const data = await resposta.json();
 
     // Atualiza o estado com os resultados dos filmes mais bem avaliados
     setTopMovies(data.results);
@@ -44,8 +44,7 @@ const Home = () => {
         {topMovies.length === 0 && <p>Carregando...</p>}
 
         {/* se os topMovies estivem preenchidos. */}
-        {topMovies.length &&
-          topMovies.map((movie) => <MovieCard key={movie.id} movie={movie} />)}
+        {topMovies.length && topMovies.map((movie) => <MovieCard key={movie.id} movie={movie} />)}
       </div>
     </div>
   );
