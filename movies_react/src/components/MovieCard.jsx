@@ -15,7 +15,7 @@ const MovieCard = ({movie, showLink = true}) => {
       <FaStar /> {movie.vote_average}
     </p>
 
-    {/* Verificando se showLink e verdadeira se for, executar o codigo */}
+    {/* Verificando se showLink e verdadeira se for, executar o codigo, depois ir pra pagina */}
     {showLink && <Link to={`/movie/${movie.id}`}>Detalhes </Link>}
   </div>
 }
